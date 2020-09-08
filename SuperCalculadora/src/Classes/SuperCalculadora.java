@@ -186,7 +186,10 @@ public class SuperCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbuCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuCalcActionPerformed
-   
+int num = Integer.parseInt(jspNum.getValue().toString());
+int res = num %2;
+jlaResto.setText(Integer.toString(res));
+        jpaCalc.setVisible(true);
     }//GEN-LAST:event_jbuCalcActionPerformed
 
     /**
