@@ -45,6 +45,7 @@ public class SuperCalculadora extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setText("Digite o Valor");
 
@@ -195,6 +196,8 @@ double raizq = Math.sqrt(num);
 jlaQuad.setText(Double.toString(raizq));
 double raizc = Math.cbrt(num);
 jlaCub.setText(Double.toString(raizc));
+int abs = Math.abs(num);
+jlaAbs.setText(Integer.toString(abs));
         jpaCalc.setVisible(true);
     }//GEN-LAST:event_jbuCalcActionPerformed
 
