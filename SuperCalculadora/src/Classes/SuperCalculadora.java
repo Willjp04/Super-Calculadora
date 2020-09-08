@@ -48,7 +48,7 @@ public class SuperCalculadora extends javax.swing.JFrame {
 
         jLabel1.setText("Digite o Valor");
 
-        jspNum.setModel(new javax.swing.SpinnerNumberModel(1, -50, 50, 1));
+        jspNum.setModel(new javax.swing.SpinnerNumberModel(1, -50, null, 1));
 
         jbuCalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/simbolos (3).png"))); // NOI18N
         jbuCalc.setText("Calcular");
@@ -161,8 +161,8 @@ public class SuperCalculadora extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jspNum, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jspNum)))
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel8)))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
@@ -189,6 +189,12 @@ public class SuperCalculadora extends javax.swing.JFrame {
 int num = Integer.parseInt(jspNum.getValue().toString());
 int res = num %2;
 jlaResto.setText(Integer.toString(res));
+double Cubo = Math.pow(num,3);
+jlaCubo.setText(Double.toString(Cubo));
+double raizq = Math.sqrt(num);
+jlaQuad.setText(Double.toString(raizq));
+double raizc = Math.cbrt(num);
+jlaCub.setText(Double.toString(raizc));
         jpaCalc.setVisible(true);
     }//GEN-LAST:event_jbuCalcActionPerformed
 
